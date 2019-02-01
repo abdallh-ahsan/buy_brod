@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "$"
-var adminprefix = '$'
+var prefix = "#"
+var adminprefix = '#'
 
 
 //bc
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "$";
+  var prefix = "#";
 
   client.on("message", message => {
   
@@ -66,7 +66,7 @@ m.sendMessage(args)
 });
 
   client.on('message', msg => {
-    if(msg.content === '$help')
+    if(msg.content === '#help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -78,11 +78,11 @@ m.sendMessage(args)
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       $obc | لأرسال برود كاست للكل
+       #obc | لأرسال برود كاست للكل
 
-       $bc  |  لأرسال برود كاست للأونلاين
+       #bc  |  لأرسال برود كاست للأونلاين
 
-       $adminbc | برودكاست عادي
+       #adminbc | برودكاست عادي
 
        ** `)
    message.author.sendEmbed(embed)
@@ -125,4 +125,4 @@ if (message.content.startsWith(adminprefix + 'setava')) {
 });
 
 
-client.login("NTQwMTYyNTUwNzEzNTQ4ODEw.DzM5Pg.LbWV-Nr2XLvqXRkYMqbhmJ4_xwM");
+client.login(process.env.BOT_TOKEN);
